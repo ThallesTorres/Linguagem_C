@@ -4,14 +4,12 @@
 
 int main(void) 
 {
-  int num, quadrado;
+  int num;
 
   printf("Digite um número: ");
   scanf("%d", &num);
 
-  quadrado = num * num;
-
-  printf("O quadrado de %d é %d \n", num, quadrado);
+  printf("O quadrado de %d é %d. \n", num, num * num);
 
   return 0;
 }

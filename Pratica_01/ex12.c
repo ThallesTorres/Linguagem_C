@@ -4,20 +4,17 @@
 
 int main(void)
 {
-    int num, count, impar;
-    num = 0;
+    int num, impar;
     impar = 1;
-    count = 0;
 
     printf("Digite um número: ");
     scanf("%d", &num);
     
     printf("Os %d primeiros números ímpares são: ", num);
 
-    while (count < num)
+    for (int count = 0; count < num; count ++)
     {
         printf("%d ", impar);
-        count += 1;
         impar += 2;
     }
 

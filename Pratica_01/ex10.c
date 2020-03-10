@@ -5,24 +5,17 @@
 
 int main(void) 
 {
-    int num, count, resp;
+    int num, count;
 
     do
     {
-        printf("Entre com uma sequência de números inteiros não-nulos (iniciando por 1): ");
+        printf("Digite um número (0 para sair): ");
         scanf("%d", &num);
 
-        if (num > 0)
-        {
-            resp = num * num;
-
-            printf("Quadrado de %d: %d\n", num, resp);
-        } 
-
-        else 
-        {
-            printf("Número digitado não é válido.\n");
-        }
+        (num > 0) ? 
+        
+        printf("Quadrado de %d: %d\n", num, num * num) : 
+        printf("Número digitado não é válido.\n");
     }
     while (num != 0);
 

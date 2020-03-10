@@ -11,7 +11,7 @@ int main(void)
 
   printf("Digite um número: ");
   scanf("%d", &num);
-
+/*
   if (num % 2 != 0) 
   {
     printf("O número %d é ÍMPAR. \n", num);
@@ -21,6 +21,8 @@ int main(void)
   {
     printf("O número %d é PAR. \n", num);
   }
+*/
+  printf("O número %d é %s. \n", num, (num % 2 == 0) ? "PAR" : "ÍMPAR");
 
   return 0;
 }

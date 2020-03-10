@@ -4,8 +4,7 @@
 
 int main(void)
 {
-    int n1, n2, count;
-    n1 = 0;
+    int n1, n2;
 
     printf("Digite um número inteiro: ");
     scanf("%d", &n1);
@@ -15,6 +14,23 @@ int main(void)
 
     printf("%d elevado a %d é ", n1, n2);
 
+    (n2 == 0 && n1 != 0) ?
+
+    printf("1 \n") :
+    (n2 == 0 && n1 == 0) ?
+    
+    printf("uma Indeterminação \n") :
+    printf("");
+
+    for (int count = 1; count < n2; count ++)
+    {
+        n1 = n1 * n1;
+    }
+    
+    printf("%d\n", n1);
+
+
+/*
     if (n2 == 0 && n1 != 0)
     {
         printf("1 \n");
@@ -27,11 +43,11 @@ int main(void)
 
     else 
     {
-        for (count = 1; count < n2; count ++)
+        for (int count = 1; count < n2; count ++)
         {
             n1 = n1 * n1;
         }
         
         printf("%d\n", n1);
-    }
+    }*/
 }

@@ -4,7 +4,7 @@
 
 int main(void) 
 {
-  int n1, n2, resp;
+  int n1, n2;
 
   printf("Digite o 1° número: ");
   scanf("%d", &n1);
@@ -12,9 +12,7 @@ int main(void)
   printf("Digite o 2° número: ");
   scanf("%d", &n2);
 
-  resp = n1 + n2;
-
-  printf("A soma entre %d e %d é %d \n", n1, n2, resp);
+  printf("A soma entre %d e %d é %d. \n", n1, n2, n1 + n2);
 
   return 0;
 }

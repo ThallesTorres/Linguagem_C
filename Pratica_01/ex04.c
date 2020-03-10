@@ -4,14 +4,12 @@
 
 int main(void) 
 {
-  int ano, idade;
+  int ano;
 
   printf("Ano de Nascimento: ");
   scanf("%d", &ano);
 
-  idade = 2020 - ano;
-
-  printf("Quem nasceu em %d tem %d anos. \n", ano, idade);
+  printf("Quem nasceu em %d tem %d anos. \n", ano, 2020 - ano);
 
   return 0;
 }
