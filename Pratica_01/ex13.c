@@ -14,12 +14,14 @@ int main(void)
 
     printf("%d elevado a %d é ", n1, n2);
 
-    (n2 == 0 && n1 != 0) ?
-
-    printf("1 \n") :
-    (n2 == 0 && n1 == 0) ?
-    
-    printf("uma Indeterminação \n") :
+    (n2 == 0 && n1 != 0) 
+    ?
+    printf("1 \n") 
+    :
+    (n2 == 0 && n1 == 0) 
+    ?
+    printf("uma Indeterminação \n") 
+    :
     printf("");
 
     for (int count = 1; count < n2; count ++)
