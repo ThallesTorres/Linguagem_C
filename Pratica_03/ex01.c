@@ -5,29 +5,39 @@
 # include <stdio.h>
 
 int linha(void) {
-    char x[30] = "-";
+    char x = '-';
+
+    printf("\n");
+
     for (int count = 0; count < 30; count ++) {
-        printf("%c", x[count]);
+        printf("%c", x);
     }
+
+    printf("\n\n");
 
     return 0;
 }
 
-int main(void) {
-    int x[10] = 0;
 
-    int d = linha();
+int main(void) {
+    int x[10];
+
+    linha();
 
     for (int count = 0; count <= 9; count ++) {
         printf("Digite 10 números [%i/10]: ", count + 1);
         scanf("%i", &x[count]);
     }
 
+    linha();
+
     printf("Valores digitados: ");
 
     for (int count = 0; count <= 9; count ++) {
         printf("%i%s", x[count], (count == 9) ? "\n" : " | ");
     }
+
+    linha();
 
     return 0;
 }
