@@ -20,7 +20,7 @@ int linha(void) {
 
 
 int main(void) {
-    int x[10];
+    int x[9];
 
     linha();
 

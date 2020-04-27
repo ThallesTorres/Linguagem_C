@@ -25,7 +25,7 @@ int linha(void) {
 
 int main(void) {
 
-    int x[10], count_geral = 0, maior = 0;
+    int x[9], count_geral = 0, maior = 0;
     float soma = 0;
 
     linha();
