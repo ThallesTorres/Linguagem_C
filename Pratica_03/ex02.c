@@ -25,7 +25,7 @@ int linha(void) {
 
 int main(void) {
 
-    int x[9];
+    int x[10];
 
     linha();
 
