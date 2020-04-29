@@ -1,10 +1,16 @@
+// Exercício 07 - Leia uma vetor de 8 posições e troque os 4 primeiros valores pelos 
+// 4 últimos e vice e versa. Escreva ao final o vetor obtido.
+
 # include <stdio.h>
+
+int vetor_trocado[8]; // Perguntar para a professora, como que se retorna um vetor...
+
 
 int linha(void) {
 
     char x = '-';
 
-    printf("\n");
+    printf("\n\033[33m");
 
     for (int count = 0; count < 30; count ++) {
 
@@ -12,33 +18,18 @@ int linha(void) {
 
     }
 
-    printf("\n\n");
+    printf("\033[m\n\n");
 
     return 0;
 
 }
 
 
-int inverso(int qtd) {
+int vetor_troca(int vetor[8]) {
 
-    int new_qtd = qtd -1;
-
-    int vetor[new_qtd];
-
-    for (int count = 0; count <= new_qtd; count ++) {
-
-        printf("Digite %i números [%i/%i]: ", qtd, count + 1, qtd);
-        scanf("%i", &vetor[count]);
-
-    }
-
-    linha();
-
-    printf("Valores digitados (trocado): ");
-
-    for (int count = new_qtd; count >= 0; count --) {
-
-        printf("%i%s", vetor[count], (count == 0) ? "\n" : " | ");
+    for (int first = 0, last = 4; first <= 3; first ++, last ++) {
+        vetor_trocado[first] = vetor[last];
+        vetor_trocado[last] = vetor[first];
 
     }
 
@@ -48,16 +39,29 @@ int inverso(int qtd) {
 
 int main(void) {
 
-    int qtd = 0;
+    int vetor[8];
 
     linha();
 
-    printf("Quatidade de números a serem digitados: ");
-    scanf("%i", &qtd);
+    for (int count = 0; count < 8; count ++) {
+
+        printf("Digite 8 números [%i/8]: ", count + 1);
+        scanf("%i", &vetor[count]);
+
+    }
 
     linha();
 
-    troca_metade(qtd);
+    vetor_troca(vetor);
+
+    linha();
+
+    printf("Trocados: ");
+
+    for (int count = 0; count < 8; count ++) {
+
+        printf("%i%s", vetor_trocado[count], (count == 7) ? "\n" : " | ");
+    }
 
     linha();
 

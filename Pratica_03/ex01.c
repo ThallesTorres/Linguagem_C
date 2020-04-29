@@ -4,37 +4,78 @@
 
 # include <stdio.h>
 
+
 int linha(void) {
+
     char x = '-';
 
-    printf("\n");
+    printf("\n\033[33m");
 
     for (int count = 0; count < 30; count ++) {
+
         printf("%c", x);
+
     }
 
-    printf("\n\n");
+    printf("\033[m\n\n");
 
     return 0;
+
+}
+
+
+int criar_vetor(void) {
+    int qtd = 0;
+
+    linha();
+
+    printf("Quantidade de números a serem digitados: ");
+    scanf("%i", &qtd);
+
+    int vetor[qtd];
+
+    linha();
+
+    for (int count = 0; count < qtd; count ++) {
+
+        printf("Digite %i números [%i/%i]: ",qtd, count + 1, qtd);
+        scanf("%i", &vetor[count]);
+
+    }
+
+    return 0;
+
 }
 
 
 int main(void) {
-    int x[10];
+
+    int qtd = 0;
 
     linha();
 
-    for (int count = 0; count <= 9; count ++) {
-        printf("Digite 10 números [%i/10]: ", count + 1);
-        scanf("%i", &x[count]);
+    printf("Quantidade de números a serem digitados: ");
+    scanf("%i", &qtd);
+
+    int vetor[qtd];
+
+    linha();
+
+    for (int count = 0; count < qtd; count ++) {
+
+        printf("Digite %i números [%i/%i]: ",qtd, count + 1, qtd);
+        scanf("%i", &vetor[count]);
+
     }
 
     linha();
 
     printf("Valores digitados: ");
 
-    for (int count = 0; count <= 9; count ++) {
-        printf("%i%s", x[count], (count == 9) ? "\n" : " | ");
+    for (int count = 0; count < qtd ; count ++) {
+
+        printf("%i%s", vetor[count], (count == qtd - 1) ? "\n" : " | ");
+
     }
 
     linha();

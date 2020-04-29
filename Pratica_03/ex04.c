@@ -1,10 +1,14 @@
-// Exercício 04 - Dado um vetor de 5 posições contendo 0 ou 1 (base binária), transformá-lo para a base decimal. Criar uma função que recebe esse vetor e retorne o número (base decimal)
+// Exercício 04 - Dado um vetor de 5 posições contendo 0 ou 1 (base binária), transformá-lo 
+// para a base decimal. Criar uma função que recebe esse vetor e retorne o número (base decimal).
+
+# include <stdio.h>
+
 
 int linha(void) {
 
     char x = '-';
 
-    printf("\n");
+    printf("\n\033[33m");
 
     for (int count = 0; count < 30; count ++) {
 
@@ -12,7 +16,7 @@ int linha(void) {
 
     }
 
-    printf("\n\n");
+    printf("\033[m\n\n");
 
     return 0;
 

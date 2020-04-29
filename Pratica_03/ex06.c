@@ -6,7 +6,7 @@ int linha(void) {
 
     char x = '-';
 
-    printf("\n");
+    printf("\n\033[33m");
 
     for (int count = 0; count < 30; count ++) {
 
@@ -14,7 +14,7 @@ int linha(void) {
 
     }
 
-    printf("\n\n");
+    printf("\033[m\n\n");
 
     return 0;
 

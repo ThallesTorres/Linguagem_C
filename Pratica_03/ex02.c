@@ -4,11 +4,12 @@
 
 # include <stdio.h>
 
+
 int linha(void) {
 
     char x = '-';
 
-    printf("\n");
+    printf("\n\033[33m");
 
     for (int count = 0; count < 30; count ++) {
 
@@ -16,7 +17,7 @@ int linha(void) {
 
     }
 
-    printf("\n\n");
+    printf("\033[m\n\n");
 
     return 0;
 
@@ -25,14 +26,21 @@ int linha(void) {
 
 int main(void) {
 
-    int x[10];
+    int qtd = 0;
 
     linha();
 
-    for (int count = 0; count <= 9; count ++) {
+    printf("Quantidade de números a serem digitados: ");
+    scanf("%i", &qtd);
 
-        printf("Digite 10 números [%i/10]: ", count + 1);
-        scanf("%i", &x[count]);
+    int vetor[qtd];
+
+    linha();
+
+    for (int count = 0; count < qtd; count ++) {
+
+        printf("Digite %i números [%i/%i]: ",qtd, count + 1, qtd);
+        scanf("%i", &vetor[count]);
 
     }
 
@@ -40,9 +48,9 @@ int main(void) {
 
     printf("Valores digitados: ");
 
-    for (int count = 0; count <= 9; count ++) {
+    for (int count = 0; count <= qtd - 1; count ++) {
 
-        printf("%i%s", x[count], (count == 9) ? "\n" : " | ");
+        printf("%i%s", vetor[count], (count == qtd - 1) ? "\n" : " | ");
 
     }
 
@@ -50,12 +58,11 @@ int main(void) {
 
     printf("Maiores que 20:");
 
-    for (int a = 0, count = 0; count <= 9; count ++) {
+    for (int count = 0, a = 0; count < qtd; count ++, a ++) {
 
-        if (x[count] > 20) {
+        if (vetor[count] > 20) {
 
-            printf("%s%i", (a == 0) ? " " : " | ", x[count]);
-            a ++;
+            printf("%s%i", (a == 0) ? " " : " | ", vetor[count]);
 
         }
 
