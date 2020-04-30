@@ -73,7 +73,7 @@ int main(void) {
 
     linha();
 
-    printf("-----BINÁRIO PARA DECIMAL-----\n");
+    printf("\033[33m-----BINÁRIO PARA DECIMAL-----\033[m\n");
 
     linha();
 

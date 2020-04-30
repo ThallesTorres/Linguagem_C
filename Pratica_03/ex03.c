@@ -26,19 +26,27 @@ int linha(void) {
 
 int main(void) {
 
-    int x[10], count_geral = 0, maior = 0;
+    int count_geral = 0, maior = 0;
     float soma = 0;
+    int qtd = 0;
 
     linha();
 
-    for (int temp = 0, count = 0; count <= 9; count ++) {
+    printf("Quantidade de números a serem digitados: ");
+    scanf("%i", &qtd);
 
-        printf("Digite 10 números [%i/10]: ", count + 1);
+    int vetor[qtd];
+
+    linha();
+
+    for (int temp = 0, count = 0; count < qtd; count ++) {
+
+        printf("Digite %i números [%i/%i]: ",qtd, count + 1, qtd);
         scanf("%i", &temp);
 
         if (temp % 2 == 0) {
 
-            x[count_geral] = temp;
+            vetor[count_geral] = temp;
             count_geral ++;
             soma += temp;
 
@@ -58,9 +66,9 @@ int main(void) {
 
     printf("Valores PARES digitados: ");
 
-    for (int count = 0; count <= count_geral - 1; count ++) {
+    for (int count = 0; count < count_geral; count ++) {
 
-        printf("%i%s", x[count], (count == count_geral - 1) ? "\n" : " | ");
+        printf("%i%s", vetor[count], (count == count_geral - 1) ? "\n" : " | ");
 
     }
 

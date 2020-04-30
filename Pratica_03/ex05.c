@@ -23,23 +23,60 @@ int linha(void) {
 }
 
 
-int main(void) {
+int binario_para_decimal(int qtd) {
 
-    char *nome;
+    char vetor[qtd];
 
-    printf("Digite seu nome: ");
-    scanf("%s", nome);
+    linha();
 
-    printf("Seu nome: ");
+    printf("Digite o número em BINÁRIO com %i posições: ", qtd);
+    scanf("%s", vetor);
 
-    for (int count = 0; count != 4; count ++) {
-        printf("%i - %c\n", count, nome[count]);
+    int soma_final = 0; 
+ 
+    for (int count = 0, expoente = qtd - 1; count < qtd; count ++, expoente --) {
+
+        if (vetor[count] == '1') {
+
+            int soma_temp = 1;
+
+            for (int exp_temp = expoente; exp_temp != 0; exp_temp --) {
+
+                soma_temp *= 2;
+
+            }
+
+        soma_final += soma_temp;
+
+        }
+        
     }
 
-    // printf("COMEÇANDO...\n");
-    // for (int count = 0; count != 0; count ++) {
-    //     printf("VEIO PARA O FOR...");
-    // }
+    return soma_final;
+
+}
+
+
+int main(void) {
+
+    linha();
+
+    printf("\033[33m-----BINÁRIO PARA DECIMAL-----\033[m\n");
+
+    linha();
+
+    int qtd = 0;
+
+    printf("Quantidade de digitos a serem digitados: ");
+    scanf("%i", &qtd);
+
+    int resp = binario_para_decimal(qtd);
+
+    linha();
+
+    printf("Número convertido para decimal: %i\n", resp);
+
+    linha();
 
     return 0;
 }
