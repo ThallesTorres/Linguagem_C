@@ -45,7 +45,7 @@ int main(void) {
 
     linha();
 
-    int vetor_trocado[qtd], metade = qtd / 2;
+    int vetor_trocado[qtd + 1], metade = (1 + qtd) / 2;
 
     for (int first = 0, last = metade; first < metade; first ++, last ++) {
         vetor_trocado[first] = vetor[last];

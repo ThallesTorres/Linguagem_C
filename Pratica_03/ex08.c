@@ -44,5 +44,28 @@ int main(void) {
 
     linha(); 
 
+    int busca = 0, count_busca = 0, lugar_busca[qtd];
+
+    printf("Número a ser buscado: ");
+    scanf("%i", &busca);
+
+    for (int count = 0; count < qtd; count ++) {
+
+        if (vetor[count] == busca) {
+
+            lugar_busca[count_busca] = count;
+            count_busca ++;
+
+        }
+
+    }
+
+    linha();
+
+    printf("Total de números %i encontrados na lista digitada: %i\n", busca, count_busca);
+    printf("Lugares da lista em que foram encontrados: %s\n", lugar_busca);
+
+    linha();
+
     return 0;
 }
