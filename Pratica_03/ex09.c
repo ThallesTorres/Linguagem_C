@@ -1,3 +1,6 @@
+// Exercício 09 - Dado dois vetores, A e B, faça um programa em C que imprima 
+// todos os elementos comuns aos dois vetores.
+
 # include <stdio.h>
 
 
@@ -22,13 +25,73 @@ int linha(void) {
 
 int main(void) {
 
-    int qtd = 2, vetor[1];
+    int qtdA = 0, qtdB = 0;
 
-    for (int count = 0; count < 2; count ++) {
+    linha();
 
-        printf("Digite %i números [%i/%i]: ",qtd, count + 1, qtd);
-        scanf("%i", &vetor[count]);
+    printf("Quantidade de números a serem digitados no vetor A: ");
+    scanf("%i", &qtdA);
+
+    int vetorA[qtdA];
+
+    linha();
+
+    for (int count = 0; count < qtdA; count ++) {
+
+        printf("Digite %i números [%i/%i]: ",qtdA, count + 1, qtdA);
+        scanf("%i", &vetorA[count]);
+
     }
+
+    linha(); 
+
+    printf("Quantidade de números a serem digitados no vetor B: ");
+    scanf("%i", &qtdB);
+
+    int vetorB[qtdB];
+
+    linha();
+
+    for (int count = 0; count < qtdB; count ++) {
+
+        printf("Digite %i números [%i/%i]: ",qtdB, count + 1, qtdB);
+        scanf("%i", &vetorB[count]);
+
+    }
+
+    linha(); 
+
+    int count_comum = 0, comum[qtdA];
+
+    for (int countA = 0; countA < qtdA; countA ++) {
+
+        for (int countB = 0; countB < qtdB; countB ++) {
+
+            if (vetorA[countA] == vetorB[countB]) {
+
+                // for (int count = 0; count < count_comum; count ++) {
+
+                //     if (comum[count] == )
+                // }
+
+                comum[count_comum] = vetorA[countA];
+                count_comum ++;
+
+            }
+
+        }
+
+    }
+
+    printf("Números em comum: ");
+
+    for (int count = 0; count < count_comum; count ++) {
+
+        printf("%i%s", comum[count], (count == count_comum - 1) ? "\n" : " | ");
+
+    }
+
+    linha();
 
     return 0;
 }

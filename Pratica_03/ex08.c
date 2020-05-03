@@ -62,8 +62,20 @@ int main(void) {
 
     linha();
 
-    printf("Total de números %i encontrados na lista digitada: %i\n", busca, count_busca);
-    printf("Lugares da lista em que foram encontrados: %s\n", lugar_busca);
+    printf("Quantidade de número %i encontrados: %i\n", busca, count_busca);
+
+    if (count_busca != 0) {
+
+        printf((count_busca > 1) ? "Sendo encontrados nas posições " : "Sendo encontrado na posição ");
+
+        for (int count = 0; count < count_busca; count ++) {
+
+            printf("(%i) ", lugar_busca[count]);
+        }
+
+        printf("do vetor.\n");
+
+    }
 
     linha();
 

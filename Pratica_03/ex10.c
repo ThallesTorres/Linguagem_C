@@ -29,36 +29,44 @@ int main(void) {
 
     linha();
 
-    printf("Quantidade de números a serem digitados: ");
+    printf("Quantidade de números a serem digitados nos vetores: ");
     scanf("%i", &qtd);
 
-    int vetor[qtd];
+    int vetorA[qtd], vetorB[qtd];
 
     linha();
+
+    printf("        \033[31mVetor A\033[m\n");
 
     for (int count = 0; count < qtd; count ++) {
 
         printf("Digite %i números [%i/%i]: ",qtd, count + 1, qtd);
-        scanf("%i", &vetor[count]);
+        scanf("%i", &vetorA[count]);
+
+    }
+
+    linha(); 
+
+    printf("        \033[31mVetor B\033[m\n");
+
+    for (int count = 0; count < qtd; count ++) {
+
+        printf("Digite %i números [%i/%i]: ",qtd, count + 1, qtd);
+        scanf("%i", &vetorB[count]);
 
     }
 
     linha();
 
-    int vetor_trocado[qtd + 1], metade = (1 + qtd) / 2;
-
-    for (int first = 0, last = metade; first < metade; first ++, last ++) {
-        vetor_trocado[first] = vetor[last];
-        vetor_trocado[last] = vetor[first];
-
-    }
-
-    printf("Trocados: ");
+    int produto = 0;
 
     for (int count = 0; count < qtd; count ++) {
 
-        printf("%i%s", vetor_trocado[count], (count == qtd - 1) ? "\n" : " | ");
+        produto += vetorA[count] * vetorB[count];
+
     }
+
+    printf("Produto Escalar de A por B: %i\n", produto);
 
     linha();
 
