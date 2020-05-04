@@ -1,5 +1,6 @@
-// Exercício 07 - Leia uma vetor de 8 posições e troque os 4 primeiros valores pelos 
-// 4 últimos e vice e versa. Escreva ao final o vetor obtido.
+// Exercício 10 - Suponha um vetor N com 10 elementos e outro vetor M com 10 elementos. 
+// Faça um programa em C que calcule o produto escalar P de A por B. (Isto é, 
+// P = A[1] * B[1] + A[2] * B[2] + ... A[N] + B[N]).
 
 # include <stdio.h>
 
@@ -32,27 +33,27 @@ int main(void) {
     printf("Quantidade de números a serem digitados nos vetores: ");
     scanf("%i", &qtd);
 
-    int vetorA[qtd], vetorB[qtd];
+    int vetorN[qtd], vetorM[qtd];
 
     linha();
 
-    printf("        \033[31mVetor A\033[m\n");
+    printf("        \033[31mVetor N\033[m\n");
 
     for (int count = 0; count < qtd; count ++) {
 
         printf("Digite %i números [%i/%i]: ",qtd, count + 1, qtd);
-        scanf("%i", &vetorA[count]);
+        scanf("%i", &vetorN[count]);
 
     }
 
     linha(); 
 
-    printf("        \033[31mVetor B\033[m\n");
+    printf("        \033[31mVetor M\033[m\n");
 
     for (int count = 0; count < qtd; count ++) {
 
         printf("Digite %i números [%i/%i]: ",qtd, count + 1, qtd);
-        scanf("%i", &vetorB[count]);
+        scanf("%i", &vetorM[count]);
 
     }
 
@@ -62,11 +63,11 @@ int main(void) {
 
     for (int count = 0; count < qtd; count ++) {
 
-        produto += vetorA[count] * vetorB[count];
+        produto += vetorN[count] * vetorM[count];
 
     }
 
-    printf("Produto Escalar de A por B: %i\n", produto);
+    printf("Produto Escalar de N por M: %i\n", produto);
 
     linha();
 

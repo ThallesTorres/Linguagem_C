@@ -69,13 +69,27 @@ int main(void) {
 
             if (vetorA[countA] == vetorB[countB]) {
 
-                // for (int count = 0; count < count_comum; count ++) {
+                int count_repetido = 0;
 
-                //     if (comum[count] == )
-                // }
+                for (int count = 0; count < count_comum; count ++) {
 
-                comum[count_comum] = vetorA[countA];
-                count_comum ++;
+                    if (comum[count] == vetorA[countA]) {
+
+                        count_repetido ++;
+
+                    }
+
+                }
+
+                if (count_repetido <= 1) {
+
+                    comum[count_comum] = vetorA[countA];
+                    count_comum ++;
+
+                } 
+
+                // comum[count_comum] = vetorA[countA];
+                // count_comum ++;
 
             }
 
@@ -87,9 +101,11 @@ int main(void) {
 
     for (int count = 0; count < count_comum; count ++) {
 
-        printf("%i%s", comum[count], (count == count_comum - 1) ? "\n" : " | ");
+        printf("%i%s", comum[count], (count == count_comum - 1) ? "" : " | ");
 
     }
+
+    printf("\n");
 
     linha();
 
