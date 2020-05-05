@@ -30,6 +30,10 @@ int main(void) {
 
     linha();
 
+    printf("\033[32m## LENDO E IMPRIMINDO >= 20.\033[m\n");
+
+    linha();
+
     printf("Quantidade de números a serem digitados: ");
     scanf("%i", &qtd);
 
@@ -58,11 +62,13 @@ int main(void) {
 
     printf("Maiores que 20:");
 
-    for (int count = 0, a = 0; count < qtd; count ++, a ++) {
+    for (int count = 0, x = 0; count < qtd; count ++) {
 
-        if (vetor[count] > 20) {
+        if (vetor[count] >= 20) {
 
-            printf("%s%i", (a == 0) ? " " : " | ", vetor[count]);
+            printf("%s%i", (x == 0) ? " " : " | ", vetor[count]);
+
+            x ++;
 
         }
 

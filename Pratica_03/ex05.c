@@ -61,7 +61,7 @@ int main(void) {
 
     linha();
 
-    printf("\033[33m-----BINÁRIO PARA DECIMAL-----\033[m\n");
+    printf("\033[32m## BINÁRIO PARA DECIMAL (POSIÇÕES ILIMITADAS).\033[m\n");
 
     linha();
 

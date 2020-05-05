@@ -24,33 +24,13 @@ int linha(void) {
 }
 
 
-int criar_vetor(void) {
-    int qtd = 0;
-
-    linha();
-
-    printf("Quantidade de números a serem digitados: ");
-    scanf("%i", &qtd);
-
-    int vetor[qtd];
-
-    linha();
-
-    for (int count = 0; count < qtd; count ++) {
-
-        printf("Digite %i números [%i/%i]: ",qtd, count + 1, qtd);
-        scanf("%i", &vetor[count]);
-
-    }
-
-    return 0;
-
-}
-
-
 int main(void) {
 
     int qtd = 0;
+
+    linha();
+
+    printf("\033[32m## LENDO E IMPRIMINDO. \033[m\n");
 
     linha();
 

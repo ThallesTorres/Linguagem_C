@@ -29,6 +29,10 @@ int main(void) {
 
     linha();
 
+    printf("\033[32m## ELEMENTOS EM COMUM.\033[m\n");
+
+    linha();
+
     printf("Quantidade de números a serem digitados no vetor A: ");
     scanf("%i", &qtdA);
 
@@ -87,9 +91,6 @@ int main(void) {
                     count_comum ++;
 
                 } 
-
-                // comum[count_comum] = vetorA[countA];
-                // count_comum ++;
 
             }
 

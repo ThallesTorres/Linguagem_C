@@ -34,7 +34,7 @@ int inverso(int qtd) {
 
     linha();
 
-    printf("Valores digitados (inverso): ");
+    printf("Valores digitados (invertidos): ");
 
     for (int count = qtd - 1; count >= 0; count --) {
 
@@ -49,6 +49,10 @@ int inverso(int qtd) {
 int main(void) {
 
     int qtd = 0;
+
+    linha();
+
+    printf("\033[32m## LENDO E IMPRIMINDO (INVERTIDOS).\033[m\n");
 
     linha();
 

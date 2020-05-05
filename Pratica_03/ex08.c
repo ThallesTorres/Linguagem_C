@@ -1,4 +1,6 @@
-// Exercício 08 - Inicialize um vetor de 10 posições e em seguida leia um valor X qualquer. Seu programa devera fazer uma busca do valor de X no vetor lido e informar a posição em que foi encontrado ou se não foi encontrado.
+// Exercício 08 - Inicialize um vetor de 10 posições e em seguida leia um valor X qualquer. 
+// Seu programa devera fazer uma busca do valor de X no vetor lido e informar a posição em que 
+// foi encontrado ou se não foi encontrado.
 
 # include <stdio.h>
 
@@ -25,6 +27,10 @@ int linha(void) {
 int main(void) {
 
     int qtd = 0;
+
+    linha();
+
+    printf("\033[32m## BUSCANDO NO VETOR.\033[m\n");
 
     linha();
 

@@ -26,9 +26,12 @@ int linha(void) {
 
 int main(void) {
 
-    int count_geral = 0, maior = 0;
+    int count_geral = 0, maior = 0, qtd = 0;
     float soma = 0;
-    int qtd = 0;
+
+    linha();
+
+    printf("\033[32m## ANALISANDO O VETOR.\033[m\n");
 
     linha();
 
@@ -74,7 +77,7 @@ int main(void) {
 
     linha();
 
-    printf("Quantidade de valore PARES: %i\n", count_geral);
+    printf("Quantidade de valores PARES: %i\n", count_geral);
 
     printf("Maior valor PAR: %i\n", maior);
 

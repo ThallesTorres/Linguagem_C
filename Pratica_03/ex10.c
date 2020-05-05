@@ -30,6 +30,10 @@ int main(void) {
 
     linha();
 
+    printf("\033[32m## PRODUTO ESCALAR.\033[m\n");
+
+    linha();
+
     printf("Quantidade de números a serem digitados nos vetores: ");
     scanf("%i", &qtd);
 

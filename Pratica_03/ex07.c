@@ -3,8 +3,6 @@
 
 # include <stdio.h>
 
-int vetor_trocado[8]; // Perguntar para a professora, como que se retorna um vetor...
-
 
 int linha(void) {
 
@@ -25,42 +23,49 @@ int linha(void) {
 }
 
 
-int vetor_troca(int vetor[8]) {
-
-    for (int first = 0, last = 4; first <= 3; first ++, last ++) {
-        vetor_trocado[first] = vetor[last];
-        vetor_trocado[last] = vetor[first];
-
-    }
-
-    return 0;
-}
-
-
 int main(void) {
 
-    int vetor[8];
+    int qtd = 0;
 
     linha();
 
-    for (int count = 0; count < 8; count ++) {
+    printf("\033[32m## TROCANDO OS VALORES DO VETOR.\033[m\n");
 
-        printf("Digite 8 números [%i/8]: ", count + 1);
+    linha();
+
+    do {
+
+        printf("Quantidade de números a serem digitados (somente quantidades pares): ");
+        scanf("%i", &qtd);
+
+    } while (qtd % 2 != 0);
+
+    int vetor[qtd], vetor_trocado[qtd];
+
+    linha();
+
+    for (int count = 0; count < qtd; count ++) {
+
+        printf("Digite %i números [%i/%i]: ", qtd, count + 1, qtd);
         scanf("%i", &vetor[count]);
 
     }
 
     linha();
 
-    vetor_troca(vetor);
+    int metade = qtd / 2;
 
-    linha();
+    for (int first = 0, last = metade; first < metade; first ++, last ++) {
+        vetor_trocado[first] = vetor[last];
+        vetor_trocado[last] = vetor[first];
+
+    }
 
     printf("Trocados: ");
 
-    for (int count = 0; count < 8; count ++) {
+    for (int count = 0; count < qtd; count ++) {
 
-        printf("%i%s", vetor_trocado[count], (count == 7) ? "\n" : " | ");
+        printf("%i%s", vetor_trocado[count], (count == qtd - 1) ? "\n" : " | ");
     }
 
     linha();

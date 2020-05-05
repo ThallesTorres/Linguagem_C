@@ -28,6 +28,10 @@ int main (void ) {
 
     linha();
 
+    printf("\033[32m## ANALISANDO O TEMPO DAS VOLTAS EM UMA CORRIDA.\033[m\n");
+
+    linha();
+
     printf("Quantidade de voltas realizadas: ");
     scanf("%i", &qtd);
 
@@ -50,7 +54,7 @@ int main (void ) {
         if (melhor_tempo > vetor[count]) {
 
             melhor_tempo = vetor[count];
-            volta = count + 1;
+            volta = count;
 
 
         }
@@ -62,7 +66,7 @@ int main (void ) {
     linha(); 
 
     printf("Melhor tempo: %.1f\n", melhor_tempo);
-    printf("Ocorrido na %i volta \n", volta);
+    printf("Ocorrido na %i° volta \n", volta + 1);
     printf("Tempo médio: %.1f\n", soma / qtd);
 
     linha();
