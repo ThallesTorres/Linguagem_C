@@ -13,7 +13,7 @@ int linha(void) {
 }
 
 
-int main (void) {
+int main(void) {
 
     char frase[101];
     int frase_len;
