@@ -1,6 +1,7 @@
-// Exercício 13 - Dada uma sequência de n números reais, determinar o número de vezes que cada um deles ocorre na mesma.
+// Exercício 01 - Criar um programa que solicita no teclado uma frase com, no máximo, 100 letras. Se o tamanho for maior que 40, exibir uma mensagem e solitar novamente a frase, senão, imprimir a frase na vertical.
 
 # include <stdio.h>
+# include <string.h>
 
 
 int linha(void) {
