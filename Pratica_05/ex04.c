@@ -1,6 +1,12 @@
-// Exercício 32 - Faça uma função que leia uma string de 50 posições digitada por um usuário, e retorne valor 1 se for um palíndromo ou 0 em caso negativo.
+// Exercício 04 - Sem usar as funções para manipulação de strings da biblioreca <string.h>, 
+// use a função gets() para armazenar seu nome na string nome[100] e:
+// A - Informe o número de caracteres do seu nome.
+// B - Informe o número de vogais, consoantes e espaços em branco do seu nome.
+// C - Exiba seu nome sem vogais e espaços em branco.
+// D - Substituir um  caractere informado pelo usuário pelo caractere *.
 
 # include <stdio.h>
+# include <string.h>
 
 
 int linha(void) {
@@ -17,6 +23,10 @@ int main(void) {
     char nome[101];
     char substituir[2];
     int count_xx = 0;
+
+    linha();
+
+    printf("\033[32m## ANÁLISES DIFERENCIADAS.\033[m\n");
 
     linha();
 
@@ -49,17 +59,19 @@ int main(void) {
 
     for (count = 0; nome[count] != '\0'; count ++) {
 
-        if (nome[count] == substituir[0]) {
+        nome_trocado[count] = (nome[count] == substituir[0]) ? '*' : nome[count];
 
-            nome_trocado[count] = '*';
+        // if (nome[count] == substituir[0]) {
 
-        }
+        //     nome_trocado[count] = '*';
 
-        else {
+        // }
 
-            nome_trocado[count] = nome[count];
+        // else {
 
-        }
+        //     nome_trocado[count] = nome[count];
+
+        // }
 
         if (nome[count] == ' ') {
 

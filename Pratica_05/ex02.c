@@ -1,4 +1,5 @@
-// Exercício 02 - Faça uma rotina que recebe uma string qualquer e retorna-o invertido. Por exemplo, se a string passada por parâmetro fosse 'teste', a rotina deve retornar 'etset'.
+// Exercício 02 - Faça uma rotina que recebe uma string qualquer e retorna-o invertido. 
+// Por exemplo, se a string passada por parâmetro fosse 'teste', a rotina deve retornar 'etset'.
 
 # include <stdio.h>
 # include <string.h>
@@ -31,6 +32,10 @@ int inverter(char string[101]) {
 int main(void) {
 
     char string[101];
+
+    linha();
+
+    printf("\033[32m## STRING INVERTIDA.\033[m\n");
 
     linha();
 

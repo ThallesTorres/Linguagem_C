@@ -1,4 +1,5 @@
-// Exercício 32 - Faça uma função que leia uma string de 50 posições digitada por um usuário, e retorne valor 1 se for um palíndromo ou 0 em caso negativo.
+// Exercício 03 - Faça uma função que leia uma string de 50 posições digitada por um usuário, 
+// e retorne valor 1 se for um palíndromo ou 0 em caso negativo.
 
 # include <stdio.h>
 # include <string.h>
@@ -35,6 +36,10 @@ int palindromo(char string[51]) {
 int main(void) {
 
     char string[51];
+
+    linha();
+
+    printf("\033[32m## PALÍNDROMO?\033[m\n");
 
     linha();
 
