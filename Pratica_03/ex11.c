@@ -22,7 +22,7 @@ int linha(void) {
 }
 
 
-int main (void ) {
+int main (void) {
 
     int qtd = 0;
 
